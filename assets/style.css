@@ -369,10 +369,16 @@
 
   /* TARIFS */
   .pricing-grid{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:20px;
-  }
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
+.price-card{
+  flex:1 1 340px;
+  max-width:360px;
+  /* ...garde tout le reste de ta règle .price-card existante (background, border, border-radius, padding, display, flex-direction) */
+}
   @media (max-width:900px){ .pricing-grid{grid-template-columns:1fr;} }
   .price-card{
     background:var(--white);
