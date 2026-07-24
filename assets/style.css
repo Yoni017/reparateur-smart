@@ -127,10 +127,11 @@
 .hero-trust{
   display:flex;
   align-items:center;
+  justify-content:center;
   gap:10px;
   flex-wrap:wrap;
   font-family:'JetBrains Mono', monospace;
-  font-size:14px;
+  font-size:12px;
   font-weight:600;
   letter-spacing:0.06em;
   text-transform:uppercase;
@@ -138,7 +139,6 @@
   margin-bottom:20px;
   position:relative;
   z-index:1;
-  align-content: center;
 }
 .hero-trust .dot{
   color:var(--signal);
