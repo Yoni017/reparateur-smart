@@ -120,7 +120,7 @@
     linear-gradient(rgba(20,20,22,0.72), rgba(20,20,22,0.82)),
     url('../images/hero-bg.jpg') center center / cover no-repeat;
   color:#fff;
-  padding:112px 0 60px;
+  padding:64px 0 60px;
   position:relative;
   overflow:hidden;
 }
@@ -130,13 +130,14 @@
   justify-content:center;
   gap:10px;
   flex-wrap:wrap;
+  text-align:center;
   font-family:'JetBrains Mono', monospace;
   font-size:12px;
   font-weight:600;
   letter-spacing:0.06em;
   text-transform:uppercase;
   color:rgba(255,255,255,0.72);
-  margin-bottom:20px;
+  margin-bottom:32px;
   position:relative;
   z-index:1;
 }
