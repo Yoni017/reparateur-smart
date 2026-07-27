@@ -140,14 +140,19 @@
 .hero-slider{
   position:relative;
   width:100%;
-}
+  overflow:hidden;
+}}
 .hero-slide{
+  position:absolute;
+  inset:0;
   width:100%;
-  height:auto;
-  display:none;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  transition:opacity 1.4s ease;
 }
 .hero-slide.active{
-  display:block;
+  opacity:1;
 }
   .hero-slider-dots{
     position:absolute;

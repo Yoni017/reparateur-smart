@@ -244,35 +244,47 @@
 
 <script>
   // Hero slider
-  (function(){
-    const slides = document.querySelectorAll('.hero-slide');
-    const dots = document.querySelectorAll('.hero-slider-dots .dot');
-    if(!slides.length) return;
-    let current = 0;
-    let timer;
+(function(){
+  const sliderEl = document.querySelector('.hero-slider');
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.hero-slider-dots .dot');
+  if(!slides.length) return;
+  let current = 0;
+  let timer;
 
-    function goTo(index){
-      slides[current].classList.remove('active');
-      dots[current].classList.remove('active');
-      current = index;
-      slides[current].classList.add('active');
-      dots[current].classList.add('active');
+  function setHeight(){
+    const img = slides[0];
+    if(img.complete && img.naturalWidth){
+      const ratio = img.naturalHeight / img.naturalWidth;
+      sliderEl.style.height = (sliderEl.offsetWidth * ratio) + 'px';
     }
-    function next(){
-      goTo((current + 1) % slides.length);
-    }
-    function startAutoplay(){
-      timer = setInterval(next, 5000);
-    }
-    dots.forEach((dot, i) => {
-      dot.addEventListener('click', () => {
-        goTo(i);
-        clearInterval(timer);
-        startAutoplay();
-      });
+  }
+  window.addEventListener('resize', setHeight);
+  if(slides[0].complete){ setHeight(); } else { slides[0].onload = setHeight; }
+  window.addEventListener('load', setHeight);
+
+  function goTo(index){
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = index;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+  function next(){
+    goTo((current + 1) % slides.length);
+  }
+  function startAutoplay(){
+    timer = setInterval(next, 7000);
+  }
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      goTo(i);
+      clearInterval(timer);
+      startAutoplay();
     });
-    startAutoplay();
-  })();
+  });
+  startAutoplay();
+})();
 
   const revealEls = document.querySelectorAll('[data-reveal]');
   const io = new IntersectionObserver((entries)=>{
