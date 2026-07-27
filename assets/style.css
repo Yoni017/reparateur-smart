@@ -175,13 +175,16 @@
   /* USP BAND — blocs bleus 3D */
   .usp{
     background:var(--bg);
-    padding:70px 0;
+    padding:70px 0 24px;
   }
   .usp-grid{
     display:grid;
     grid-template-columns:repeat(3, 1fr);
     gap:26px;
   }
+  .usp .wrap{
+  max-width:1320px;
+}
   @media (max-width:760px){ .usp-grid{grid-template-columns:1fr;} }
   .usp-item{
     background:var(--blue);
@@ -458,3 +461,5 @@
 
   [data-reveal]{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
   [data-reveal].in{opacity:1; transform:translateY(0);}
+
+
