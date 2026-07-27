@@ -124,7 +124,7 @@
   }
   .promo-bar p{
     text-align:center;
-    color:var(--signal);
+    color:red;
     font-weight:700;
     font-size:14.5px;
     letter-spacing:0.01em;
