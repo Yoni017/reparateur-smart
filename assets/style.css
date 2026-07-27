@@ -466,3 +466,12 @@
   max-width:none;
 }
 
+.tarifs-mid-title{
+  font-family:'Big Shoulders Display', sans-serif;
+  font-weight:800;
+  text-transform:uppercase;
+  color:red;
+  font-size:clamp(24px, 3vw, 34px);
+  text-align:center;
+  margin:32px 0;
+}
