@@ -120,6 +120,8 @@
   cursor:pointer;
 }
  @media (max-width:860px){
+  .nav-toggle{display:block;}
+  .nav-phone{display:none;}
   .nav-links{
     display:none;
     position:absolute;
