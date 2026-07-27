@@ -550,3 +550,13 @@
 .float-whatsapp{background:#25D366;}
 .float-phone{background:var(--signal);}
 .float-mail{background:var(--blue);}
+
+.dept{
+  display:block;
+  cursor:pointer;
+  transition:border-color .15s ease, transform .15s ease;
+}
+.dept:hover{
+  border-color:var(--signal);
+  transform:translateY(-2px);
+}
