@@ -462,4 +462,6 @@
   [data-reveal]{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
   [data-reveal].in{opacity:1; transform:translateY(0);}
 
-
+#tarifs .section-head{
+  max-width:none;
+}
