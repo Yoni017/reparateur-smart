@@ -576,3 +576,20 @@
   border-color:var(--signal);
   color:var(--signal);
 }
+
+.promo-bar-inner{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:32px;
+}
+.promo-img{
+  height:70px;
+  width:auto;
+  object-fit:contain;
+  flex-shrink:0;
+}
+@media (max-width:760px){
+  .promo-img{display:none;}
+  .promo-bar-inner{gap:0;}
+}
